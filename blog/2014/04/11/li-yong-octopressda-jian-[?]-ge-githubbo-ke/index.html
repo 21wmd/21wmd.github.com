@@ -16,7 +16,7 @@
 开始写博客
 更多操作
 配置 Octopress
-小结 1. 安装Ruby Octopress 需要 Ruby 环境，RVM(Ruby Version Manager) &hellip;">
+小结 1. 安装 Ruby Octopress 需要 Ruby 环境，RVM(Ruby Version Manager)负责安装和管理 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -113,9 +113,9 @@
 </ol>
 
 
-<h1>1. 安装Ruby</h1>
+<h1>1. 安装 Ruby</h1>
 
-<p>Octopress 需要 Ruby 环境，RVM(Ruby Version Manager)负责安装和管理Ruby的环境。所以我们先在终端输入如下命令，来安装RVM：</p>
+<p>Octopress 需要 Ruby 环境，RVM(Ruby Version Manager)负责安装和管理 Ruby 的环境。所以我们先在终端输入如下命令，来安装 RVM：</p>
 
 <pre><code>curl -L https://get.rvm.io | bash -s stable --ruby
 </code></pre>
@@ -131,11 +131,11 @@ rvm rubygems latest
 
 <p>参考：<a href="http://octopress.org/docs/setup/rvm/">Installing Ruby With RVM</a></p>
 
-<h1>2. 安装Octopress</h1>
+<h1>2. 安装 Octopress</h1>
 
 <p>在安装 Octopress 之前，请确保你的电脑上已经安装有 git 了 ，在终端输入 <code>git --version</code>，应该可以看到电脑中的 git 版本(我电脑上输出:<code>git version 1.8.5.2 (Apple Git-48)</code>)，如果没有显示相关内容，请先安装git。</p>
 
-<p>git安装之后，利用 <code>git</code> 命令将 octopress 从 github 上 clone 到本机，如下命令：</p>
+<p>git 安装之后，利用 <code>git</code> 命令将 octopress 从 github 上 clone 到本机，如下命令：</p>
 
 <pre><code>git clone git://github.com/imathis/octopress.git 21wmd.github.com
 cd 21wmd.github.com
@@ -197,7 +197,7 @@ rake deploy
 
 <p>上面的命令首先生成博客文件，并将生成的博客文件拷贝到 <code>_deploy/</code> 目录下，然后将这些内容添加到 git 中，并 <code>commit</code> 和 <code>push</code> 到仓库 <code>master</code> 分支。</p>
 
-<p>现在可以访问 <code>http://21wmd.github.io</code> 了。注意：有时候可能会有延时，要等几分钟才能打开。 至此，我们的博客已经完成基本的部署，不过博客的 <code>source</code> 需要单独提交，执行如下命令就可以将 <code>source</code> 提交到仓库的 <code>source</code> 分支下。</p>
+<p>现在可以访问 <code>http://21wmd.github.com</code> 了。注意：有时候可能会有延时，要等几分钟才能打开。 至此，我们的博客已经完成基本的部署，不过博客的 <code>source</code> 需要单独提交，执行如下命令就可以将 <code>source</code> 提交到仓库的 <code>source</code> 分支下。</p>
 
 <pre><code>git add .
 git commit -m 'Initial source commit'
