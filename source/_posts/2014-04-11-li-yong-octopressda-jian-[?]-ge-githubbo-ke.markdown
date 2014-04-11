@@ -17,8 +17,7 @@ categories:
 7. 配置 Octopress
 8. 小结
 
-<!—more—>
-
+<!--more-->
 #1. 安装 Ruby
 
 Octopress 需要 Ruby 环境，RVM(Ruby Version Manager)负责安装和管理 Ruby 的环境。所以我们先在终端输入如下命令，来安装 RVM：
