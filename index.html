@@ -250,7 +250,15 @@ rake deploy
 
 <h1>8. 小结</h1>
 
-<p>本文介绍了如何利用Octopress搭建一个Github博客。大家在搭建的时候，要是遇到问题，可以回复我。</p>
+<p>本文介绍了如何利用Octopress搭建一个Github博客。大家在搭建的时候，要是遇到问题，可以回复我。
+更新博客内容</p>
+
+<pre><code>rake generate
+rake deploy
+git add .
+git commit -m "Some commit here."
+git push origin source
+</code></pre>
 </div>
   
   
