@@ -17,7 +17,7 @@ categories:
 7. 配置 Octopress
 8. 小结
 
-<!-more->
+<!—more—>
 
 #1. 安装 Ruby
 
