@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2014-04-11T18:59:52+08:00</updated>
-  <id>http://yoursite.com/</id>
+  <title><![CDATA[二十一万亩地]]></title>
+  <link href="http://21wmd.github.io/atom.xml" rel="self"/>
+  <link href="http://21wmd.github.io/"/>
+  <updated>2014-04-11T19:04:42+08:00</updated>
+  <id>http://21wmd.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[21wmd]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[利用Octopress搭建一个Github博客]]></title>
-    <link href="http://yoursite.com/blog/2014/04/11/li-yong-octopressda-jian-%5B%3F%5D-ge-githubbo-ke/"/>
+    <link href="http://21wmd.github.io/blog/2014/04/11/li-yong-octopressda-jian-%5B%3F%5D-ge-githubbo-ke/"/>
     <updated>2014-04-11T18:58:52+08:00</updated>
-    <id>http://yoursite.com/blog/2014/04/11/li-yong-octopressda-jian-[?]-ge-githubbo-ke</id>
+    <id>http://21wmd.github.io/blog/2014/04/11/li-yong-octopressda-jian-[?]-ge-githubbo-ke</id>
     <content type="html"><![CDATA[<p><strong>目录</strong></p>
 
 <ol>
