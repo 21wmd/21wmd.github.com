@@ -4,7 +4,7 @@
   <title><![CDATA[二十一万亩地]]></title>
   <link href="http://21wmd.github.io/atom.xml" rel="self"/>
   <link href="http://21wmd.github.io/"/>
-  <updated>2014-04-11T20:06:16+08:00</updated>
+  <updated>2014-04-11T20:31:21+08:00</updated>
   <id>http://21wmd.github.io/</id>
   <author>
     <name><![CDATA[21wmd]]></name>
@@ -18,7 +18,24 @@
     <link href="http://21wmd.github.io/blog/2014/04/11/zai-gong-si-ru-he-xie-hao-%5B%3F%5D-feng-dian-zi-you-jian/"/>
     <updated>2014-04-11T20:01:57+08:00</updated>
     <id>http://21wmd.github.io/blog/2014/04/11/zai-gong-si-ru-he-xie-hao-[?]-feng-dian-zi-you-jian</id>
-    <content type="html"><![CDATA[<p><strong>注意</strong>本文只探讨：在员工都具备基本的职业素养，同事之间无冤无仇也没有人来大姨妈的情况下，如何写出让对方看过之后觉得专业并乐于回应的邮件。</p>
+    <content type="html"><![CDATA[<ol>
+<li>定义一封电子邮件的好坏很难</li>
+<li>写新邮件的最佳顺序</li>
+<li>不要把文字变成图片</li>
+<li>金字塔叙事</li>
+<li>用对方的语言和思维方式</li>
+<li>多用点，少用面</li>
+<li>多说事实，少说道理</li>
+<li>有情提示</li>
+<li>不要抄送一堆人</li>
+<li>邮件的归属权</li>
+<li>标点符号</li>
+</ol>
+
+
+<p>&lt;!-more-></p>
+
+<p><strong>注意</strong>本文只探讨：在员工都具备基本的职业素养，同事之间无冤无仇也没有人来大姨妈的情况下，如何写出让对方看过之后觉得专业并乐于回应的邮件。</p>
 
 <h1>定义一封电子邮件的好坏很难</h1>
 
@@ -137,6 +154,8 @@
 <li>小结</li>
 </ol>
 
+
+<p>&lt;!-more-></p>
 
 <h1>1. 安装 Ruby</h1>
 
