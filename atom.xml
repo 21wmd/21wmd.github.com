@@ -4,7 +4,7 @@
   <title><![CDATA[二十一万亩地]]></title>
   <link href="http://21wmd.github.io/atom.xml" rel="self"/>
   <link href="http://21wmd.github.io/"/>
-  <updated>2014-04-15T10:40:41+08:00</updated>
+  <updated>2014-04-15T11:10:31+08:00</updated>
   <id>http://21wmd.github.io/</id>
   <author>
     <name><![CDATA[21wmd]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Linux 进程、端口、IP、连接数等查询脚本]]></title>
+    <link href="http://21wmd.github.io/blog/2014/04/15/linux-jin-cheng-%2C-duan-kou-%2C-ip%2C-lian-jie-shu-deng-cha-xun-jiao-ben/"/>
+    <updated>2014-04-15T11:09:04+08:00</updated>
+    <id>http://21wmd.github.io/blog/2014/04/15/linux-jin-cheng-,-duan-kou-,-ip,-lian-jie-shu-deng-cha-xun-jiao-ben</id>
+    <content type="html"><![CDATA[<ol>
+<li>查看TCP连接状态</li>
+<li>查找请求数请20个IP（常用于查找攻来源）</li>
+<li>用tcpdump嗅探80端口的访问看看谁最高</li>
+<li>查找较多time_wait连接</li>
+<li>找查较多的SYN连接</li>
+<li>根据端口列进程</li>
+<li>查看有多少个PHP-CGI进程活动</li>
+<li>查看PHP-CGI占用内存的总数</li>
+</ol>
+
+
+<!--more-->
+
+
+<h1>查看TCP连接状态</h1>
+
+<pre><code>netstat -nat |awk '{print $6}'|sort|uniq -c|sort -rn    
+netstat -n | awk '/^tcp/ {++S[$NF]};END {for(a in S) print a, S[a]}'
+
+netstat -n | awk '/^tcp/ {++state[$NF]}; END {for(key in state) print key,"\t",state[key]}'
+
+netstat -n | awk '/^tcp/ {++arr[$NF]};END {for(k in arr) print k,"\t",arr[k]}'
+
+netstat -n |awk '/^tcp/ {print $NF}'|sort|uniq -c|sort -rn
+
+netstat -ant | awk '{print $NF}' | grep -v '[a-z]' | sort | uniq -c
+</code></pre>
+
+<p>(以上每一行实现的效果基本相同，在此列出不同的写法，方便对脚本写法的更深理解）</p>
+
+<h1>查找请求数请20个IP（常用于查找攻来源）</h1>
+
+<pre><code>netstat -anlp|grep 80|grep tcp|awk '{print $5}'|awk -F: '{print $1}'|sort|uniq -c|sort -nr|head -n20
+
+netstat -ant |awk '/:80/{split($5,ip,":");++A[ip[1]]}END{for(i in A) print A[i],i}' |sort -rn|head -n20
+</code></pre>
+
+<h1>用tcpdump嗅探80端口的访问看看谁最高</h1>
+
+<pre><code>tcpdump -i eth0 -tnn dst port 80 -c 1000 | awk -F"." '{print $1"."$2"."$3"."$4}' | sort | uniq -c | sort -nr |head -20
+</code></pre>
+
+<h1>查找较多time_wait连接</h1>
+
+<pre><code>netstat -n|grep TIME_WAIT|awk '{print $5}'|sort|uniq -c|sort -rn|head -n20
+</code></pre>
+
+<h1>找查较多的SYN连接</h1>
+
+<pre><code>netstat -an | grep SYN | awk '{print $5}' | awk -F: '{print $1}' | sort | uniq -c | sort -nr | more
+</code></pre>
+
+<h1>根据端口列进程</h1>
+
+<pre><code>netstat -ntlp | grep 80 | awk '{print $7}' | cut -d/ -f1
+</code></pre>
+
+<h1>查看有多少个PHP-CGI进程活动</h1>
+
+<pre><code>netstat -anp | grep php-cgi | grep ^tcp | wc -l
+</code></pre>
+
+<p>8.查看PHP-CGI占用内存的总数</p>
+
+<pre><code>total=0; for i in `ps -C php-cgi -o rss=`; do total=$(($total+$i)); done; echo "PHP-CGI Memory usage: $total kb"
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[如何写好商业策划书]]></title>
